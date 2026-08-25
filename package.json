@@ -1,0 +1,25 @@
+{
+  "name": "@oresoftware/fake-git-remote",
+  "version": "0.1.0",
+  "description": "Create deterministic local bare Git remotes for integration tests",
+  "type": "module",
+  "private": true,
+  "engines": {
+    "node": ">=22"
+  },
+  "bin": {
+    "fake-git-remote": "./bin/fake-git-remote.mjs"
+  },
+  "exports": "./src/index.mjs",
+  "files": [
+    "bin",
+    "src",
+    "README.md",
+    "LICENSE"
+  ],
+  "scripts": {
+    "test": "node --test",
+    "check": "node --check src/index.mjs && node --check bin/fake-git-remote.mjs && npm test"
+  },
+  "license": "MIT"
+}
